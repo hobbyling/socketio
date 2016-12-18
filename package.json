@@ -3,22 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "dependencies": {
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "socket.io": "^1.7.2"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/hobbyling/socketio.git"
+    "url": "git+https://github.com/hobbyling/socketio.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/hobbyling/socketio/issues"
   },
-  "homepage": "https://github.com/hobbyling/socketio#readme",
-  "dependencies": {
-    "ejs": "^2.5.5",
-    "express": "^4.14.0"
-  }
+  "homepage": "https://github.com/hobbyling/socketio#readme"
 }
