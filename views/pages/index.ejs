@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>socket.io</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+    <main>
+        <div class="jumbotron">
+            <h1>This is great</h1>
+            <p>Welcome to templating using EJS</p>
+            <h2>Variable</h2>
+            <p><%= tagline %></p>
+            <h2>Loop</h2>
+                <ul>
+                    <% drinks.forEach(function(drink) { %>
+                        <li><%= drink.name %> - <%= drink.number %></li>
+                    <% }); %>
+                </ul>
+        </div>
+    </main>
+</body>
+</html>
