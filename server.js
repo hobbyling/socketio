@@ -11,7 +11,7 @@ app.get('/', function(req, res){
  	res.render('pages/index');
 });
 
-var user_count=0;
+//var user_count=0;
 
 //當新的使用者進入聊天室
 io.on('connection',function(socket){
