@@ -12,10 +12,10 @@
           name = "guest";
         }
 
-        //tell server
+        //tell server，發送事件用socket.emit
         socket.emit("add user",name);
         
-        //監聽新訊息事件
+        //監聽新訊息事件，接收事件用socket.on
         socket.on('chat message', function(data){
           appendMessage(data.username+":"+data.msg);
         });

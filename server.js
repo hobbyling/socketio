@@ -16,6 +16,7 @@ var user_count=0;
 //當新的使用者進入聊天室
 io.on('connection',function(socket){
 	//新user
+	//socket.on:新增一個監聽事件，像jQuery的$('#btn').on('click',function(...))
  	socket.on('add user',function(msg){
  		socket.username=msg;
  		console.log("new user:"+msg+"logged.");
@@ -27,7 +28,7 @@ io.on('connection',function(socket){
  	//監聽新訊息事件
  	socket.on('chat message',function(msg){
  		console.log(socket.username+":"+msg);
- 		//發佈新訊息
+ 		//發佈新訊息，io.emit:送出資料給所有連線的client
  		io.emit('chat message',{
  			username:socket.username,
  			msg:msg
