@@ -23,6 +23,7 @@ io.on('connection',function(socket){
  			username:socket.username
  		});
  	});
+
  	//監聽新訊息事件
  	socket.on('chat message',function(msg){
  		console.log(socket.username+":"+msg);
@@ -32,6 +33,7 @@ io.on('connection',function(socket){
  			msg:msg
  		});
  	});
+
  	//離開聊天室
  	socket.on('disconnect',function(){
  		console.log(socket.username+"left.");
@@ -42,5 +44,5 @@ io.on('connection',function(socket){
 });
 
 http.listen(process.env.PORT || 3000, function() {  
-  console.log('Listening on port 3000');  
+  	console.log('Listening on port 3000');  
 });
